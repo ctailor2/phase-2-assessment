@@ -1,0 +1,7 @@
+<div class="container">
+  <h3>Events You've Created</h3>
+  <%= erb :_event_list, :locals => {:events => @created_events} %>
+  <a href="/events/new">Create Event</a>
+  <h3>Events You've Attended</h3>
+  <%= erb :_event_list, :locals => {:events => @attended_events} %>
+</div>

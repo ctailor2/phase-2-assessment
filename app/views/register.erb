@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Register</h1>
+  <form action="/register" method="POST">
+    <div class="stack-text-inputs">
+      <input type="text" name="user[first_name]" placeholder="First Name">
+      <input type="text" name="user[last_name]" placeholder="Last Name">
+      <input type="text" name="user[email]" placeholder="Email">
+      <input type="date" name="user[birthdate]" placeholder="Birthdate">
+      <input type="password" name="user[password]" placeholder="Password">
+      <input type="password" name="user[password_confirmation]" placeholder="Password Confirmation">
+      <input type="submit" value="Register">
+    </div>
+  </form>
+  <%= erb :_errors %>
+</div>
