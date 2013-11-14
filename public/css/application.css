@@ -6,6 +6,14 @@
   position:relative;  
 }
 
+.new-event {
+  margin: 20px auto;
+  width: 500px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+  position:relative;  
+}
+
 th {
   text-align: left;
 }

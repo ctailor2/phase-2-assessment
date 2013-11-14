@@ -1,0 +1,16 @@
+<div class="container">
+  <h3>Event Details</h3>
+  <form action="/events/new" method="POST">
+    <div class="stack-text-inputs">
+      Name:
+      <input type="text" name="event[name]" value="<%= @event.name %>" disabled>
+      Location:
+      <input type="text" name="event[location]" value="<%= @event.location %>" disabled>
+      Starts at:<input type="datetime-local" value="<%= @event.starts_at.strftime("%Y-%m-%dT%H:%M:%S") %>" disabled>
+      Ends at:<input type="datetime-local" value="<%= @event.starts_at.strftime("%Y-%m-%dT%H:%M:%S") %>" disabled>
+      <% if @event.user_id == current_user.id %>
+        <button id="edit">Edit</button>
+      <% end %>
+    </div>
+  </form>
+</div>

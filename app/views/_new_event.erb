@@ -1,0 +1,12 @@
+<div class="new-event">
+  <h3>New Event</h3>
+  <div class="stack-text-inputs">
+    <form id="new-event" action="/events/new" method="POST">
+      <input type="text" name="event[name]" placeholder="Name">
+      <input type="text" name="event[location]" placeholder="Location">
+      Starts at:<input type="datetime-local" name="event[starts_at]">
+      Ends at:<input type="datetime-local" name="event[ends_at]">
+      <input type="submit" value="Create">
+    </form>
+  </div>
+</div>

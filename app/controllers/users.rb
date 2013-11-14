@@ -16,10 +16,11 @@ end
 
 post '/login' do
   email = params[:user][:email]
+  password = params[:user][:password]
 
   user = User.find_by_email(email)
   if !user.nil?
-    auth_user = user.authenticate(email)
+    auth_user = user.authenticate(password)
     if auth_user
       session[:user_id] = auth_user.id
       redirect "/users/#{session[:user_id]}"
