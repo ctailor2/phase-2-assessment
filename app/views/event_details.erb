@@ -1,7 +1,7 @@
 <div class="container">
   <h3>Event Details</h3>
-  <form action="/events/new" method="POST">
-    <div class="stack-text-inputs">
+  <div class="stack-text-inputs">
+    <form id="details" action="/events/new" method="POST">
       Name:
       <input type="text" name="event[name]" value="<%= @event.name %>" disabled>
       Location:
@@ -11,6 +11,6 @@
       <% if @event.user_id == current_user.id %>
         <button id="edit">Edit</button>
       <% end %>
-    </div>
-  </form>
+    </form>
+  </div>
 </div>

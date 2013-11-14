@@ -7,5 +7,7 @@ $(document).ready(function() {
     });
   })
 
-  
+  $("#edit").click(function(){
+    $("#details input").prop("disabled", false);
+  })
 });
