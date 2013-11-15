@@ -1,9 +1,9 @@
 <div class="container">
   <h3>Events You've Created</h3>
   <%= erb :_event_list, :locals => {:events => @created_events} %>
-  <!-- <button id="create-event">Create Event</button> -->
+  <button id="create-event">Create Event</button>
+  <button id="hide-create-event">Hide</button>
   <%= erb :_new_event %>
 
   <h3>Events You've Attended</h3>
-  <%= erb :_event_list, :locals => {:events => @attended_events} %>
 </div>

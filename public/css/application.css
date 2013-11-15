@@ -11,7 +11,8 @@
   width: 500px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
-  position:relative;  
+  position:relative;
+  display:none;
 }
 
 th {
@@ -68,7 +69,31 @@ input {
   font-size:20px;
 }
 
-.event-listing li {
-  margin-top: 7px;
-  margin-bottom: 7px;
+.event-listing {
+  margin:10px;
+}
+
+.event-listing td {
+  padding-left:5px;
+  padding-right:5px;
+}
+
+#cancel-edit {
+  display:none;
+}
+
+#update {
+  display:none;
+}
+
+#hide-create-event {
+  display:none;
+}
+
+button {
+  margin-right:10px;
+}
+
+.col-20px {
+  width:20px;
 }

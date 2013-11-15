@@ -23,7 +23,7 @@ post '/login' do
     auth_user = user.authenticate(password)
     if auth_user
       session[:user_id] = auth_user.id
-      redirect "/users/#{session[:user_id]}"
+      redirect "/users/#{current_user.id}"
     else
       @errors = ["Password incorrect"]
       erb :login
@@ -38,7 +38,7 @@ post '/register' do
   user = User.create(params[:user])
   if !user.id.nil?
     session[:user_id] = user.id
-    redirect "/users/#{session[:user_id]}"
+    redirect "/users/#{current_user.id}"
   else
     @errors = user.errors.full_messages
     erb :register

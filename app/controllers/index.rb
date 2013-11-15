@@ -30,11 +30,17 @@ post '/events/new' do
 
     event.to_json
   else
-    redirect "/users/#{session[:user_id]}"
+    redirect "/users/#{current_user.id}"
   end
 end
 
 get '/events/:event_id' do
   @event = Event.find(params[:event_id])
   erb :event_details
+end
+
+post '/events/:event_id' do
+  event = Event.find(params[:event_id])
+  event.update_attributes(params[:event])
+  redirect "/users/#{current_user.id}"
 end
